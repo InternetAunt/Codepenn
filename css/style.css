@@ -1,0 +1,54 @@
+@use postcss-preset-env {
+  stage: 0
+
+}
+
+body {
+  min-height: 50vh;
+  display: grid;
+  align-items: center;
+}
+
+form {
+  display: block;
+  flex-wrap: wrap;
+
+  & > input {
+    flex: 1 1 10ch;
+    margin: .5rem;
+
+    &[type="email"] {
+      flex: 3 1 30ch;
+    }
+  }
+}
+
+input {
+  border: none;
+  background:hsl(0 0% 93%);
+  border-radius: .25rem;
+  padding: .75rem 1rem;
+
+  &[type="submit"] {
+    background: hotpink;
+    color: white;
+    box-shadow: 0 .75rem .5rem -.5rem hsl(0 50% 80%);
+  }
+}
+
+form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.name {
+  flex-grow: 1;
+  flex-basis: 160px;
+
+}
+button {
+  flex-grow: 1;
+  flex-basis: 80px;
+}
